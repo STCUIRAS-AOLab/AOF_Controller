@@ -953,7 +953,7 @@ namespace AOF_Controller
             var num_of_F = 10;
             float _df = (Filter.HZ_Max - Filter.HZ_Min) / (num_of_F+2);
 
-            List<float> LoF = new List<float>();
+            List<double> LoF = new List<double>();
 
             for (int i =0;i< num_of_F;i++)
             {
@@ -962,7 +962,7 @@ namespace AOF_Controller
 
             try
             {
-                (Filter as STC_Filter).Set_MF_test(LoF, 20f);
+                (Filter as STC_Filter).Set_MF_test(LoF, 20);
             }   
             catch
             {
